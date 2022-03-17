@@ -20,7 +20,7 @@
         <span>{{ currency.description }} ({{ currency.code }}):</span>
 
         <span class="highlight right">
-          <span v-html="currency.symbol"></span>{{ currency['rate_float'] | currencydecimal }}
+          <span v-html="currency.symbol"></span>{{ currency['rate_float'] | currencyDecimal }}
         </span>
       </div>
     </div>
@@ -59,7 +59,7 @@
       }
     },
     filters: {
-      currencydecimal(value) {
+      currencyDecimal(value) {
         return value.toFixed(2);
       },
     },
