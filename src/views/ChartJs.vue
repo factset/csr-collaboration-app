@@ -34,23 +34,22 @@
       LineChartJs,
     },
     methods: {
-      /**
-       * Get data method uses axios to get data via a HTTP API Endpoint
-       */
-      getData() {
-        axios
-          .get('https://api.coindesk.com/v1/bpi/historical/close.json') // HTTP GET Request
-          .then(response => {
-            this.chartData.labels           = _.keys(response.data['bpi']);
-            this.chartData.datasets[0].data = _.values(response.data['bpi']);
-            this.updated                    = response.data.time.updated;
-            this.disclaimer                 = response.data.disclaimer;
-          })
-          .catch(error => { // Executes if an error occurs if code is not >= 200 && < 300
-            this.showError = true;
-            this.error     = error;
-          })
-          .finally(() => this.loading = false); // Always occurs even if there is an error
+        async getData() {
+
+        try {
+          // Get data method uses axios to get data via a HTTP API Endpoint
+          const response = await axios.get('https://api.coindesk.com/v1/bpi/historical/close.json');
+          this.chartData.labels = _.keys(response.data['bpi']);
+          this.chartData.datasets[0].data = _.values(response.data['bpi']);
+          this.updated = response.data.time.updated;
+          this.disclaimer = response.data.disclaimer;
+        } catch (error) {
+          // Executes if an error occurs if code is not >= 200 && < 300
+          this.showError = true;
+          this.error = error;
+        } finally {
+          this.loading = false
+        }
       },
     },
 

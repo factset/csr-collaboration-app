@@ -27,28 +27,26 @@
   export default {
     name: 'HighChartLineChart',
     methods: {
-      /**
-       * Get data method uses axios to get data via a HTTP API Endpoint
-       */
-      getData() {
-        axios
-          .get('https://api.coindesk.com/v1/bpi/historical/close.json') // HTTP GET Request
-          .then(response => {
 
-            // Parse the response data into a format that highcharts understands
-            this.chartOptions.series[0].data = this.parseData(response.data['bpi']);
+      async getData() {
+        try {
+          // Get data method uses axios to get data via a HTTP API Endpoint
+          const response = await axios.get('https://api.coindesk.com/v1/bpi/historical/close.json');
+          // Parse the response data into a format that highcharts understands
+          this.chartOptions.series[0].data = this.parseData(response.data['bpi']);
 
-            // Assign the last updated time
-            this.updated = response.data.time.updated;
+          // Assign the last updated time
+          this.updated = response.data.time.updated;
 
-            // Assign the disclaimer text
-            this.disclaimer = response.data.disclaimer;
-          })
-          .catch(error => { // Executes if an error occurs if code is not >= 200 && < 300
-            this.showError = true;
-            this.error     = error;
-          })
-          .finally(() => this.loading = false); // Always occurs even if there is an error
+          // Assign the disclaimer text
+          this.disclaimer = response.data.disclaimer;
+        } catch (error) {
+          // Executes if an error occurs if code is not >= 200 && < 300
+          this.showError = true;
+          this.error = error;
+        } finally {
+          this.loading = false
+        }
       },
       /**
        * Parse data function

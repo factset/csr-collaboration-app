@@ -44,21 +44,19 @@
         error: null,
       };
     },
-    mounted() {
-      /**
-       * Get data method uses axios to get data via a HTTP API Endpoint
-       */
-      axios
-        .get('https://api.coindesk.com/v1/bpi/currentprice.json') // HTTP GET Request
-        .then(response => {
-          this.currencies = response.data['bpi'];
-          this.updated    = response.data.time.updated;
-        })
-        .catch(error => { // Executes if an error occurs if code is not >= 200 && < 300
-          this.showError = true;
-          this.error     = error;
-        })
-        .finally(() => this.loading = false); // Always occurs even if there is an error
+    async mounted() {
+      try {
+        //Get data method uses axios to get data via a HTTP API Endpoint
+        const response = await axios.get('https://api.coindesk.com/v1/bpi/currentprice.json');
+        this.currencies = response.data['bpi'];
+        this.updated = response.data.time.updated;
+      } catch(error) {
+        // Executes if an error occurs if code is not >= 200 && < 300
+        this.showError = true;
+        this.error = error;
+      }finally {
+        this.loading = false
+      }
     },
     filters: {
       currencydecimal(value) {
