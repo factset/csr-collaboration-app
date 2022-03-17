@@ -1,33 +1,33 @@
-# CSR Collaboration App
+# CSR COLLABORATION APP
 
-App for CSR collaboration between learners and volunteers
+This repository contains an application that allows FactSet volunteers to collaborate with CSR learners and learn basic web development mechanisms.
 
-## Contribute
+## CONTRIBUTE
 
 ### STACK
 
-- VueJS 2
-- Git
-- GitHub
-- NodeJS
-- Yarn
-- Vue-cli-service
-- Chrome development tools
-- ChartJS
-- HighCharts
-- Axios
-- Lodash
+These are the main technologies used:
+
+- [VueJS 2](https://vuejs.org/)
+- [Git](https://git-scm.com/)
+- [GitHub](https://github.com/)
+- [NodeJS](https://nodejs.dev/)
+- [Yarn 1](https://yarnpkg.com/)
+- [Vue-cli-service](https://cli.vuejs.org/guide/cli-service.html)
+- [Chrome development tools](https://developer.chrome.com/docs/devtools/)
+- [ChartJS](https://www.chartjs.org/)
+- [HighCharts](https://www.highcharts.com/)
+- [Axios](https://www.npmjs.com/package/axios)
+- [Lodash](https://lodash.com/)
+- [momentJS](https://momentjs.com/)
 
 ### ENVIRONMENT SET UP (LEARNER)
 
-1. Install Version Control System (VCS): [Git for Windows](https://gitforwindows.org/)
-2. Install JavaScript Runtime Engine: [Node.js LTS](https://nodejs.org/en/)
-3. Install Package Manager: [Yarn](https://yarnpkg.com/lang/en/)
-4. Install Editor: [Visual Studio Code](https://code.visualstudio.com/download) or other
-5. Optional, Install Visual Studio Code Vue.js Extension: [Vetur - Vue tooling for VS Code](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
-6. Optional, Install Vue CLI using Git Bash: `$ yarn global add @vue/cli`
-7. Optional, Open the Vue UI `$ vue ui`
-8. Optional, Open Visual Studio Code `$ code`
+1. Install [Git for Windows](https://gitforwindows.org/)
+2. Install [NodeJS](https://nodejs.org/en/)
+3. Install [Yarn](https://yarnpkg.com/lang/en/)
+4. Install [Visual Studio Code](https://code.visualstudio.com/download) or other IDE
+5. Register yourself in GitHub, in case you are not
 
 ### FORK (LEARNER)
 
@@ -36,10 +36,12 @@ App for CSR collaboration between learners and volunteers
 
 ### CHECKOUT (LEARNER)
 
-- CLONE locally forked project using ```git clone https://github.com/factset/csr-collaboration-app.git``` or using your IDE
+- Clone locally forked project using ```git clone https://github.com/factset/csr-collaboration-app.git``` or using your IDE
 - Create new branch locally ```git checkout -b my-new-feature-branch```
 
 ### INSTALL AND BUILD LOCALLY (LEARNER)
+
+- Execute following commands:
 
 ```bash
 # Install Dependencies
@@ -69,7 +71,7 @@ $ yarn lint
 
 ### CREATE PULL REQUEST (PR) (LEARNER)
 
-- ask for help if you don't know how to do this.
+- Create a PR in GitHub, ask for help if you don't know how to do this.
 
 ### REVIEW (LEARNER and VOLUNTEER)
 
@@ -81,9 +83,11 @@ $ yarn lint
 
 ### MERGE (LEARNER)
 
-- merge, ask for help if you are unsure.
+- Merge in GitHub, ask for help if you are unsure.
 
-## Exercises
+## EXERCISES
+
+Try the following, one by one:
 
 - Historic Data Chart
 - Multiple Data Sets
@@ -92,7 +96,7 @@ $ yarn lint
 - Change styles
 - Localization
 
-## Resources
+## RESOURCES
 
 - [CoinDesk Documentation](https://www.coindesk.com/api/)
 - [CoinDesk Bitcoin Price Index](https://api.coindesk.com/v1/bpi/currentprice.json)
