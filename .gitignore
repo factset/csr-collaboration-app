@@ -102,3 +102,8 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Normally this should not be done, done here to prevent fixing to factset artifactory
+yarn.lock
+
+.idea
