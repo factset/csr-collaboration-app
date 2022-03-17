@@ -37,7 +37,7 @@ These are the main technologies used:
 ### CHECKOUT (LEARNER)
 
 - Clone locally forked project using ```git clone https://github.com/factset/csr-collaboration-app.git``` or using your IDE
-- Create new branch locally ```git checkout -b my-new-feature-branch```
+- Create new branch locally ```git checkout -b my-new-feature-branch``` or using your IDE
 
 ### INSTALL AND BUILD LOCALLY (LEARNER)
 
@@ -59,15 +59,15 @@ $ yarn lint
 
 ### CHANGE (LEARNER)
 
-- Do one of the exercises or any change in the code
+- Do any change in the code
 
 ### COMMIT (LEARNER)
 
-- ```git commit -m "New: Exciting Feature"```
+- ```git commit -m "New: Exciting Feature"``` or using your IDE
 
 ### PUSH (LEARNER)
 
-- ```git push origin my-new-feature-branch```
+- ```git push origin my-new-feature-branch``` or using your IDE
 
 ### CREATE PULL REQUEST (PR) (LEARNER)
 
@@ -89,6 +89,7 @@ $ yarn lint
 
 Try the following, one by one:
 
+- In Overview Tab, show the price of the Japanese Yen
 - Historic Data Chart
 - Multiple Data Sets
 - Loading Spinner
