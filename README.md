@@ -85,27 +85,10 @@ $ yarn lint
 
 - Merge in GitHub, ask for help if you are unsure.
 
-## EXERCISES
-
-Try the following, one by one:
-
-- In Overview Tab, show the price of the Japanese Yen
-- Historic Data Chart
-- Multiple Data Sets
-- Loading Spinner
-- Cache Data
-- Change styles
-- Localization
-
 ## RESOURCES
 
-- [CoinDesk Documentation](https://www.coindesk.com/api/)
-- [CoinDesk Bitcoin Price Index](https://api.coindesk.com/v1/bpi/currentprice.json)
-- [CoinDesk Bitcoin Price Historical](https://api.coindesk.com/v1/bpi/historical/close.json)
+- [CoinDesk Documentation](https://developers.coinbase.com/api/v2)
 - [Highcharts](https://www.highcharts.com/)
 - [ChartJS](https://www.chartjs.org/)
-- [Google Charts](https://developers.google.com/chart/)
-- [Chartist](https://gionkunz.github.io/chartist-js/)
-- [C3.js](https://c3js.org/)
 - [Made with Vue.js](https://madewithvuejs.com/charts)
 - [ES2015+ Cheat Sheet](https://devhints.io/es6)
