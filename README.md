@@ -21,7 +21,7 @@ These are the main technologies used:
 - [Lodash](https://lodash.com/)
 - [momentJS](https://momentjs.com/)
 
-### ENVIRONMENT SET UP (LEARNER)
+### ENVIRONMENT SET UP (learners)
 
 1. Install [Git for Windows](https://gitforwindows.org/)
 2. Install [NodeJS](https://nodejs.org/en/)
@@ -29,17 +29,17 @@ These are the main technologies used:
 4. Install [Visual Studio Code](https://code.visualstudio.com/download) or other IDE
 5. Register yourself in GitHub, in case you are not
 
-### FORK (LEARNER)
+### FORK (learners)
 
 - Go to https://github.com/factset/csr-collaboration-app
 - FORK PROJECT IS DISABLED
 
-### CHECKOUT (LEARNER)
+### CHECKOUT (learners)
 
 - Clone locally forked project using ```git clone https://github.com/factset/csr-collaboration-app.git``` or using your IDE
 - Create new branch locally ```git checkout -b my-new-feature-branch``` or using your IDE
 
-### INSTALL AND BUILD LOCALLY (LEARNER)
+### INSTALL AND BUILD LOCALLY (learners)
 
 - Execute following commands:
 
@@ -57,31 +57,31 @@ $ yarn build
 $ yarn lint
 ```
 
-### CHANGE (LEARNER)
+### CHANGE (learners)
 
 - Do any change in the code
 
-### COMMIT (LEARNER)
+### COMMIT (learners)
 
 - ```git commit -m "New: Exciting Feature"``` or using your IDE
 
-### PUSH (LEARNER)
+### PUSH (learners)
 
 - ```git push origin my-new-feature-branch``` or using your IDE
 
-### CREATE PULL REQUEST (PR) (LEARNER)
+### CREATE PULL REQUEST (PR) (learners)
 
 - Create a PR in GitHub, ask for help if you don't know how to do this.
 
-### REVIEW (LEARNER and VOLUNTEER)
+### REVIEW (learners and volunteers)
 
 - Volunteer to provide comments on changes.
 
-### APPROVE (VOLUNTEER)
+### APPROVE (volunteers)
 
 - Once agreed upon changes PR can be approved and merged.
 
-### MERGE (LEARNER)
+### MERGE (learners)
 
 - Merge in GitHub, ask for help if you are unsure.
 
@@ -92,3 +92,6 @@ $ yarn lint
 - [ChartJS](https://www.chartjs.org/)
 - [Made with Vue.js](https://madewithvuejs.com/charts)
 - [ES2015+ Cheat Sheet](https://devhints.io/es6)
+
+
+Thanks to Alex Barker for the initial setup. Forked from https://github.com/six-edge/vue-highcharts-example
