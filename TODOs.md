@@ -11,3 +11,5 @@
 - Introduce unit testing
 - Replace momentJS with dayJS
 - Usage of VITE or other more modern build tool
+- Create e2e tests
+- Create GitHub action for unit tests, linting and e2e tests
