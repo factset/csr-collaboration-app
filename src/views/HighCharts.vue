@@ -31,15 +31,15 @@
       async getData() {
         try {
           // Get data method uses axios to get data via a HTTP API Endpoint
-          const response = await axios.get('https://api.coindesk.com/v1/bpi/historical/close.json');
+          const response = await axios.get('https://api.coinstats.app/public/v1/charts?period=1m&coinId=bitcoin');
           // Parse the response data into a format that highcharts understands
-          this.chartOptions.series[0].data = this.parseData(response.data['bpi']);
+          this.chartOptions.series[0].data = this.parseData(response.data.chart);
 
           // Assign the last updated time
-          this.updated = response.data.time.updated;
+          this.updated = moment().format('YYYY-MM-DD HH:mm:ss');
 
           // Assign the disclaimer text
-          this.disclaimer = response.data.disclaimer;
+          this.disclaimer = 'Data from coin stats api';
         } catch (error) {
           // Executes if an error occurs if code is not >= 200 && < 300
           this.showError = true;
@@ -51,8 +51,10 @@
       /**
        * Parse data function
        */
-      parseData(response) {
-        return _.map(response, (value, key) => [moment(key, 'YYYY-MM-DD').valueOf(), value]);
+      parseData(data) {
+        // return _.map(data, (value, key) => [moment(key, 'YYYY-MM-DD').valueOf(), value]);
+        const parsedData = _.map(data, (value) => [ moment(value[0]).format('YYYY-MM-DD'), value[1]])
+        return parsedData;
       },
     },
 

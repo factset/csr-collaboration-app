@@ -85,6 +85,10 @@ $ yarn lint
 
 - Merge in GitHub, ask for help if you are unsure.
 
+### EXERCISES (learners)
+
+- Go to [Exercises](./EXERCISES.md)
+
 ## RESOURCES
 
 - [CoinDesk Documentation](https://developers.coinbase.com/api/v2)
@@ -92,6 +96,7 @@ $ yarn lint
 - [ChartJS](https://www.chartjs.org/)
 - [Made with Vue.js](https://madewithvuejs.com/charts)
 - [ES2015+ Cheat Sheet](https://devhints.io/es6)
+- [CoinStats API](https://cryptocointracker.com/api/coinstats/all-endpoints) 
 
 
 Thanks to Alex Barker for the initial setup. Forked from https://github.com/six-edge/vue-highcharts-example
