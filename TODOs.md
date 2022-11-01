@@ -14,3 +14,5 @@
 - Create e2e tests
 - Create GitHub action for unit tests, linting and e2e tests
 - Create Node server to handle API requests so CORS is not needed
+
+ikztu
