@@ -22,7 +22,6 @@
 <script>
   import * as moment from 'moment';
   import axios from 'axios';
-  import _ from 'lodash';
 
   export default {
     name: 'HighChartLineChart',
@@ -32,6 +31,7 @@
         try {
           // Get data method uses axios to get data via a HTTP API Endpoint
           const response = await axios.get('https://api.coinstats.app/public/v1/charts?period=1m&coinId=bitcoin');
+
           // Parse the response data into a format that highcharts understands
           this.chartOptions.series[0].data = this.parseData(response.data.chart);
 
@@ -52,9 +52,7 @@
        * Parse data function
        */
       parseData(data) {
-        // return _.map(data, (value, key) => [moment(key, 'YYYY-MM-DD').valueOf(), value]);
-        const parsedData = _.map(data, (value) => [ moment(value[0]).format('YYYY-MM-DD'), value[1]])
-        return parsedData;
+        return data.map((value) => [value[0] * 1000, value[1]])
       },
     },
 
@@ -75,9 +73,13 @@
           series: [
             {
               name: 'Bitcoin (BTC/USD)',
-              type: 'line',
+              type: 'spline',
               color: '#f7931a',
               data: null,
+              marker: {
+                enabled: true,
+                radius: 4
+              }
             },
           ],
           navigator: {

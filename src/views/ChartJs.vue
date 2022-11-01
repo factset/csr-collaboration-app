@@ -26,7 +26,6 @@
 <script>
   import LineChartJs from '../components/LineChartJs.vue';
   import axios from 'axios';
-  import _ from 'lodash';
   import * as moment from "moment";
 
   export default {
@@ -40,8 +39,8 @@
         try {
           // Get data method uses axios to get data via a HTTP API Endpoint
           const response = await axios.get('https://api.coinstats.app/public/v1/charts?period=1m&coinId=bitcoin');
-          this.chartData.labels = _.map(response.data.chart, (value) =>  moment(value[0]).format('YYYY-MM-DD'))
-          this.chartData.datasets[0].data = _.map(response.data.chart, (value) => value[1])
+          this.chartData.labels = response.data.chart.map((value) =>  moment(value[0] * 1000).format('YYYY-MM-DD'))
+          this.chartData.datasets[0].data = response.data.chart.map((value) => value[1])
           // Assign the last updated time
           this.updated = moment().format('YYYY-MM-DD HH:mm:ss');
 
