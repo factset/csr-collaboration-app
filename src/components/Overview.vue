@@ -1,7 +1,7 @@
 <template>
   <div id="overview">
 
-    <h1 class="animated bounceInLeft">Bitcoin Price Index</h1>
+    <h1 class="animated bounceInLeft">Top 10 Cryptos</h1>
 
     <div class="box loading" v-if="loading">
       <p>Loading...</p>
@@ -15,12 +15,12 @@
 
     <div class="box animated bounceInLeft" v-else>
 
-      <div v-for="currency in currencies" :key="currency.code">
+      <div v-for="currency in currencies" :key="currency.symbol">
 
-        <span>{{ currency.description }} ({{ currency.code }}):</span>
+        <span>{{ currency.name }} ({{ currency.symbol }}):</span>
 
         <span class="highlight right">
-          <span v-html="currency.symbol"></span>{{ currency['rate_float'] | currencyDecimal }}
+          <span>USD</span> {{ currency['price'] | currencyDecimal }}
         </span>
       </div>
     </div>
@@ -32,6 +32,7 @@
 
 <script>
   import axios from 'axios';
+  import * as moment from 'moment/moment'
 
   export default {
     name: 'Overview',
@@ -47,9 +48,9 @@
     async mounted() {
       try {
         //Get data method uses axios to get data via a HTTP API Endpoint
-        const response = await axios.get('https://api.coindesk.com/v1/bpi/currentprice.json');
-        this.currencies = response.data['bpi'];
-        this.updated = response.data.time.updated;
+        const response = await axios.get('https://api.coinstats.app/public/v1/coins?skip=0&limit=10&currency=USD');
+        this.currencies = response.data['coins'];
+        this.updated = moment().format('YYYY-MM-DD HH:mm:ss');
       } catch(error) {
         // Executes if an error occurs if code is not >= 200 && < 300
         this.showError = true;
